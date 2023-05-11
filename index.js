@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 // require('dotenv').config();
-
+const PORT = process.env.PORT || 3000;
 // enable CORS for FCC
 const cors = require('cors');
 
@@ -44,6 +44,6 @@ app.get('/api/:date', (req, res, next) => {
 
 
 // listen for requests :)
-app.listen(process.env.PORT || 3000, function () {
+app.listen(PORT, function () {
   console.log('Your app is listening on port ' + process.env.PORT);
 });
